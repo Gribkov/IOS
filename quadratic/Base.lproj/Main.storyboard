@@ -88,16 +88,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLv-kr-8Fw">
-                                <rect key="frame" x="230" y="28" width="85" height="94"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="53"/>
-                                <state key="normal" title="=">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="calButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Il-GI-jra"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJb-fk-WjQ">
                                 <rect key="frame" x="230" y="130" width="85" height="79"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="31"/>
@@ -108,6 +98,20 @@
                                     <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sBr-LK-qZ5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLv-kr-8Fw">
+                                <rect key="frame" x="230" y="28" width="85" height="94"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="53"/>
+                                <state key="normal" title="=">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Il-GI-jra"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzA-Gy-dlm">
+                                <rect key="frame" x="20" y="217" width="280" height="243"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -120,6 +124,7 @@
                         <outlet property="ax" destination="Hdi-im-eFA" id="1B8-vo-iKP"/>
                         <outlet property="bx" destination="xwg-Qb-Y1C" id="gl7-89-n87"/>
                         <outlet property="c" destination="bre-JT-Tck" id="R4E-XH-u26"/>
+                        <outlet property="chartView" destination="mzA-Gy-dlm" id="EZC-6t-C0R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
