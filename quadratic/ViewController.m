@@ -18,11 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.ax setText:@"0"];
-//    [self.ax setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
     [self.bx setText:@"0"];
-//    [self.bx setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
     [self.c setText:@"0"];
-//    [self.c setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
     [self.D setText:@"D"];
     [self.X1 setText:@"X1"];
     [self.X2 setText:@"X2"];
