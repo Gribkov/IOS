@@ -34,6 +34,8 @@
 }
 
 - (IBAction)calButton:(id)sender {
+    CGContextRef curContext = UIGraphicsGetCurrentContext();
+    
     //Close keyboard
     if ([self.ax isFirstResponder]) {
         [self.ax resignFirstResponder];
@@ -64,6 +66,11 @@
         
     }
     
+    CGContextBeginPath(curContext);
+//    CGContextMoveToPoint(curContext, 0, 0);
+//    CGContextAddLineToPoint(curContext, 100, 100);
+//    CGContextSetLineWidth(curContext, 2);
+    CGContextStrokePath(curContext);
 
 }
 - (IBAction)clearButton:(id)sender {
