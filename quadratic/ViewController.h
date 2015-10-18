@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GraphView.h"
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *ax;
@@ -17,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *X1;
 @property (weak, nonatomic) IBOutlet UILabel *X2;
 - (IBAction)clearButton:(id)sender;
-@property (weak, nonatomic) IBOutlet UIView *graphView;
+@property (strong, nonatomic) GraphView *graphView;
 
 @end
 

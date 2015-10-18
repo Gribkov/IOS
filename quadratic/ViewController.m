@@ -23,6 +23,10 @@
     [self.D setText:@"D"];
     [self.X1 setText:@"X1"];
     [self.X2 setText:@"X2"];
+    CGRect rect = CGRectMake(10, 10, 100, 100);
+    self.graphView = [[GraphView alloc] initWithFrame: rect];
+    [self.graphView setBackgroundColor: [UIColor blackColor]];
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,7 +35,6 @@
 }
 
 - (IBAction)calButton:(id)sender {
-    CGContextRef curContext = UIGraphicsGetCurrentContext();
     
     //Close keyboard
     if ([self.ax isFirstResponder]) {
@@ -62,13 +65,9 @@
         self.X2.text = [NSString stringWithFormat:@"%f",abc];
         
     }
+    [self.graphView drawInContext: self.graphView.context];
     
-    CGContextBeginPath(curContext);
-//    CGContextMoveToPoint(curContext, 0, 0);
-//    CGContextAddLineToPoint(curContext, 100, 100);
-//    CGContextSetLineWidth(curContext, 2);
-    CGContextStrokePath(curContext);
-
+    
 }
 - (IBAction)clearButton:(id)sender {
     //Clean input form

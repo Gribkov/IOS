@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60CE1C21BD41EA20021AD0A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = B60CE1C11BD41EA20021AD0A /* GraphView.m */; settings = {ASSET_TAGS = (); }; };
 		B641D2D81BB3254000A1B8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B641D2D71BB3254000A1B8B6 /* main.m */; };
 		B641D2DB1BB3254000A1B8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B641D2DA1BB3254000A1B8B6 /* AppDelegate.m */; };
 		B641D2DE1BB3254000A1B8B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B641D2DD1BB3254000A1B8B6 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60CE1C01BD41EA20021AD0A /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		B60CE1C11BD41EA20021AD0A /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		B641D2D31BB3254000A1B8B6 /* quadratic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quadratic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B641D2D71BB3254000A1B8B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B641D2D91BB3254000A1B8B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				B641D2D91BB3254000A1B8B6 /* AppDelegate.h */,
+				B60CE1C01BD41EA20021AD0A /* GraphView.h */,
+				B60CE1C11BD41EA20021AD0A /* GraphView.m */,
 				B641D2DA1BB3254000A1B8B6 /* AppDelegate.m */,
 				B641D2DC1BB3254000A1B8B6 /* ViewController.h */,
 				B641D2DD1BB3254000A1B8B6 /* ViewController.m */,
@@ -276,6 +281,7 @@
 				B641D2DE1BB3254000A1B8B6 /* ViewController.m in Sources */,
 				B641D2DB1BB3254000A1B8B6 /* AppDelegate.m in Sources */,
 				B641D2D81BB3254000A1B8B6 /* main.m in Sources */,
+				B60CE1C21BD41EA20021AD0A /* GraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +505,7 @@
 				B641D3021BB3254000A1B8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B641D3031BB3254000A1B8B6 /* Build configuration list for PBXNativeTarget "quadraticTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +514,7 @@
 				B641D3051BB3254000A1B8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B641D3061BB3254000A1B8B6 /* Build configuration list for PBXNativeTarget "quadraticUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +523,7 @@
 				B641D3081BB3254000A1B8B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
