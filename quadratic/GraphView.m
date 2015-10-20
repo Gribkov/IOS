@@ -26,7 +26,7 @@
 
 -(void)drawRect:(CGRect)rect
 {
-   self.context = UIGraphicsGetCurrentContext();
+   [self drawInContext: UIGraphicsGetCurrentContext()];
 }
 
 

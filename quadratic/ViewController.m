@@ -26,6 +26,7 @@
     CGRect rect = CGRectMake(10, 10, 100, 100);
     self.graphView = [[GraphView alloc] initWithFrame: rect];
     [self.graphView setBackgroundColor: [UIColor blackColor]];
+    [self.graphView drawRect:rect];
    
 }
 
@@ -65,7 +66,7 @@
         self.X2.text = [NSString stringWithFormat:@"%f",abc];
         
     }
-    [self.graphView drawInContext: self.graphView.context];
+//    [self.graphView drawInContext: self.graphView.context];
     
     
 }
