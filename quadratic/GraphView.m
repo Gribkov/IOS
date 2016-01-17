@@ -18,7 +18,7 @@
     
     
     
-    char *txt =  "XYZ"; // создаем символьный массив, который выведем на экран
+    char *txt =  "WXYZ"; // создаем символьный массив, который выведем на экран
     CGContextSetRGBFillColor(context, 0, 0, 0, 1); // Цвет текста
     CGContextSelectFont(context, "Helvetica", 12.0, kCGEncodingMacRoman); // выбираем шрифт
     CGContextSetTextDrawingMode(context, kCGTextFill); // выбираем вариант отображения текста: kCGTextFill (заливка) или kCGTextStroke (контур)
