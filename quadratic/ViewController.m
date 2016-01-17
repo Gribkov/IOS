@@ -23,10 +23,6 @@
     [self.D setText:@"D"];
     [self.X1 setText:@"X1"];
     [self.X2 setText:@"X2"];
-    CGRect rect = CGRectMake(10, 10, 100, 100);
-    self.graphView = [[GraphView alloc] initWithFrame: rect];
-    [self.graphView setBackgroundColor: [UIColor blackColor]];
-    [self.graphView drawRect:rect];
    
 }
 
@@ -66,7 +62,10 @@
         self.X2.text = [NSString stringWithFormat:@"%f",abc];
         
     }
-//    [self.graphView drawInContext: self.graphView.context];
+    //Вычисляем вершину параболы
+    double x0 = 0, y0 = 0;
+    x0 = -([self.bx.text doubleValue]/(2*[self.ax.text doubleValue]));
+    y0 = -([self.D.text doubleValue]/(4*[self.ax.text doubleValue]));
     
     
 }
