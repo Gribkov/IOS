@@ -16,12 +16,13 @@
 {
     CGContextStrokeLineSegments(context, garphPoints, i);
     
-    
+    CGPoint x0y0Points[2] = {CGPointMake(0, 0), CGPointMake(self.x0, self.y0)};
+    CGContextStrokeLineSegments(context, x0y0Points, 2);
     
     char *txt =  "WXYZ"; // создаем символьный массив, который выведем на экран
     CGContextSetRGBFillColor(context, 0, 0, 0, 1); // Цвет текста
     CGContextSelectFont(context, "Helvetica", 12.0, kCGEncodingMacRoman); // выбираем шрифт
-    CGContextSetTextDrawingMode(context, kCGTextFill); // выбираем вариант отображения текста: kCGTextFill (заливка) или kCGTextStroke (контур)
+    CGContextSetTextDrawingMode(context, kCGTextStroke); // выбираем вариант отображения текста: kCGTextFill (заливка) или kCGTextStroke (контур)
     CGContextShowTextAtPoint(context, 20, 20, txt, strlen(txt));	// выводим текст на экран
     
 }

@@ -13,5 +13,8 @@
 -(void)drawInContext:(CGContextRef)context points:(CGPoint[]) garphPoints countElements: (int) i;
 @property double x0;
 @property double y0;
+@property double a;
+@property double b;
+@property double c;
 
 @end
