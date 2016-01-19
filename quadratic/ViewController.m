@@ -77,9 +77,9 @@
 }
 - (IBAction)clearButton:(id)sender {
     //Clean input form
-    [self.ax setText:@""];
-    [self.bx setText:@""];
-    [self.c setText:@""];
+    [self.ax setText:@"1"];
+    [self.bx setText:@"1"];
+    [self.c setText:@"1"];
     [self.D setText:@"D"];
     [self.X1 setText:@"X1"];
     [self.X2 setText:@"X2"];

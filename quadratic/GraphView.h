@@ -10,7 +10,7 @@
 
 @interface GraphView : UIView
 
--(void)drawInContext:(CGContextRef)context points:(CGPoint[]) garphPoints countElements: (int) i;
+-(void)drawInContext:(CGContextRef)context;
 @property double x0;
 @property double y0;
 @property double a;
