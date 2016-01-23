@@ -23,7 +23,14 @@
         CGPointMake(120, 10), CGPointMake(122, 15)};
     CGContextStrokeLineSegments(context, osiPoints, 12);
     
-    CGPoint xyPoints[200];
+    int totalElements = 100;
+    int k = 1;
+    
+    CGPoint xyPoints[totalElements];
+    for (int i = 0; i <= totalElements; i++)
+    {
+        xyPoints[i] = CGPointMake(120, 120);
+    }
     
   /*  char *txt =  "WXYZ"; // создаем символьный массив, который выведем на экран
     CGContextSetRGBFillColor(context, 0, 0, 0, 1); // Цвет текста
@@ -32,14 +39,16 @@
     CGContextShowTextAtPoint(context, 20, 20, txt, strlen(txt));	// выводим текст на экран
    */
     if (self.a != 0 || self.b !=0 || self.c != 0) {
+        double j = (totalElements/4)*(-1);
         int i = 0;
-        for (int j = -49; j < 50; j) {
-            xyPoints[i] = CGPointMake(j+120, ((self.a*(j*j)+self.b*j+self.c)*(-1))+120);
+        for (i; i < totalElements; i) {
+            xyPoints[i] = CGPointMake(j*k+120, k*((self.a*(j*j)+self.b*j+self.c)*(-1))+120);
             i++;
-            j++;
-            xyPoints[i] = CGPointMake(j+120, ((self.a*(j*j)+self.b*j+self.c)*(-1))+120);
+            j = j+1/k;
+            xyPoints[i] = CGPointMake(j*k+120, k*((self.a*(j*j)+self.b*j+self.c)*(-1))+120);
+            i++;
         }
-    CGContextStrokeLineSegments(context, xyPoints, 100);
+    CGContextStrokeLineSegments(context, xyPoints, totalElements);
     }
 }
 
