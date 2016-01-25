@@ -23,7 +23,7 @@
         CGPointMake(120, 10), CGPointMake(122, 15)};
     CGContextStrokeLineSegments(context, osiPoints, 12);
     
-    int totalElements = 100;
+    int totalElements = 1000;
     double k = 1;
     double xStart = 0;
     
