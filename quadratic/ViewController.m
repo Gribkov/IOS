@@ -71,6 +71,8 @@
     self.graphicView.a = [self.ax.text doubleValue];
     self.graphicView.b = [self.bx.text doubleValue];
     self.graphicView.c = [self.c.text doubleValue];
+    self.graphicView.x1 = [self.X1.text doubleValue];
+    self.graphicView.x2 = [self.X2.text doubleValue];
     [self.graphicView setNeedsDisplay];
     
     

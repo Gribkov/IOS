@@ -24,7 +24,17 @@
     CGContextStrokeLineSegments(context, osiPoints, 12);
     
     int totalElements = 100;
-    int k = 1;
+    double k = 1;
+    double xStart = 0;
+    
+    if (0 < fabs(self.x1)+fabs(self.x2) && fabs(self.x1)+fabs(self.x2) < 1) k = 100;
+    if (1 < fabs(self.x1)+fabs(self.x2) && fabs(self.x1)+fabs(self.x2) < 10) k = 10;
+    if (10 < fabs(self.x1)+fabs(self.x2) && fabs(self.x1)+fabs(self.x2) < 100) k = 1;
+    
+    
+    if (self.x1 < self.x2) xStart = self.x1;
+        else xStart = self.x2;
+    xStart--;
     
     CGPoint xyPoints[totalElements];
     for (int i = 0; i <= totalElements; i++)
@@ -39,7 +49,8 @@
     CGContextShowTextAtPoint(context, 20, 20, txt, strlen(txt));	// выводим текст на экран
    */
     if (self.a != 0 || self.b !=0 || self.c != 0) {
-        double j = (totalElements/4)*(-1);
+        double j = (totalElements/4)*(-1)/k;
+        if (self.x1 != 0 || self.x2 != 0) j = xStart;
         int i = 0;
         for (i; i < totalElements; i) {
             xyPoints[i] = CGPointMake(j*k+120, k*((self.a*(j*j)+self.b*j+self.c)*(-1))+120);

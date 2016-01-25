@@ -16,5 +16,7 @@
 @property double a;
 @property double b;
 @property double c;
+@property double x1;
+@property double x2;
 
 @end
