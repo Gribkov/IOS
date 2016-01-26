@@ -42,12 +42,16 @@
         xyPoints[i] = CGPointMake(120, 120);
     }
     
-  /*  char *txt =  "WXYZ"; // создаем символьный массив, который выведем на экран
+    CGContextScaleCTM(context,1,-1); //переворачиваю ось игрек что бы текст выводился нормально
+    
+    char *txt =  "X1 = "; // создаем символьный массив, который выведем на экран
     CGContextSetRGBFillColor(context, 0, 0, 0, 1); // Цвет текста
     CGContextSelectFont(context, "Helvetica", 12.0, kCGEncodingMacRoman); // выбираем шрифт
     CGContextSetTextDrawingMode(context, kCGTextStroke); // выбираем вариант отображения текста: kCGTextFill (заливка) или kCGTextStroke (контур)
-    CGContextShowTextAtPoint(context, 20, 20, txt, strlen(txt));	// выводим текст на экран
-   */
+    CGContextShowTextAtPoint(context, 20, -20, txt, strlen(txt));	// выводим текст на экран
+    
+    CGContextScaleCTM(context,1,-1); //переворачиваю ось игрек что бы текст выводился нормально
+    
     if (self.a != 0 || self.b !=0 || self.c != 0) {
         double j = (totalElements/4)*(-1)/k;
         if (self.x1 != 0 || self.x2 != 0) j = xStart;
@@ -67,6 +71,7 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, rect); // Очистим context
+    //CGContextScaleCTM(context,-1,-1);
     CGContextSetRGBFillColor(context, 255, 255, 255, 1);
     CGContextFillRect(context, CGRectMake(1, 1, 238, 238));
     
