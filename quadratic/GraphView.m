@@ -44,11 +44,14 @@
     
     CGContextScaleCTM(context,1,-1); //переворачиваю ось игрек что бы текст выводился нормально
     
-    char *txt =  "X1 = "; // создаем символьный массив, который выведем на экран
+    double x1D = self.x1;
+    char *txtX1 =  "X1 = "; // создаем символьный массив, который выведем на экран
+    char *txtX1Dub = (char *) &x1D;
     CGContextSetRGBFillColor(context, 0, 0, 0, 1); // Цвет текста
-    CGContextSelectFont(context, "Helvetica", 12.0, kCGEncodingMacRoman); // выбираем шрифт
+    CGContextSelectFont(context, "Helvetica", 8.0, kCGEncodingMacRoman); // выбираем шрифт
     CGContextSetTextDrawingMode(context, kCGTextStroke); // выбираем вариант отображения текста: kCGTextFill (заливка) или kCGTextStroke (контур)
-    CGContextShowTextAtPoint(context, 20, -20, txt, strlen(txt));	// выводим текст на экран
+    CGContextShowTextAtPoint(context, 20, -20, txtX1, strlen(txtX1));	// выводим текст на экран
+    CGContextShowTextAtPoint(context, 20, -70, txtX1Dub, strlen(txtX1Dub));	// выводим текст на экран
     
     CGContextScaleCTM(context,1,-1); //переворачиваю ось игрек что бы текст выводился нормально
     
