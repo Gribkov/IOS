@@ -44,14 +44,32 @@
     
     CGContextScaleCTM(context,1,-1); //переворачиваю ось игрек что бы текст выводился нормально
     
-    double x1D = self.x1;
-    char *txtX1 =  "X1 = "; // создаем символьный массив, который выведем на экран
-    char *txtX1Dub = (char *) &x1D;
-    CGContextSetRGBFillColor(context, 0, 0, 0, 1); // Цвет текста
-    CGContextSelectFont(context, "Helvetica", 8.0, kCGEncodingMacRoman); // выбираем шрифт
-    CGContextSetTextDrawingMode(context, kCGTextStroke); // выбираем вариант отображения текста: kCGTextFill (заливка) или kCGTextStroke (контур)
-    CGContextShowTextAtPoint(context, 20, -20, txtX1, strlen(txtX1));	// выводим текст на экран
-    CGContextShowTextAtPoint(context, 20, -70, txtX1Dub, strlen(txtX1Dub));	// выводим текст на экран
+    CGContextSetTextMatrix(context, CGAffineTransformIdentity);
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGRect bounds = CGRectMake(10.0, 10.0, 200.0, 200.0);
+    CGPathAddRect(path, NULL, bounds );
+    CFStringRef textString = CFSTR("Hello, World! I know nothing in the world that has as much power as a word. Sometimes I write one, and I look at it, until it begins to shine.");
+    CFMutableAttributedStringRef attrString = CFAttributedStringCreateMutable(kCFAllocatorDefault, 0);
+    CFAttributedStringReplaceString (attrString, CFRangeMake(0, 0), textString);
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    CGFloat components[] = { 1.0, 0.0, 0.0, 0.8 };
+    CGColorRef red = CGColorCreate(rgbColorSpace, components);
+    CGColorSpaceRelease(rgbColorSpace);
+    CFAttributedStringSetAttribute(attrString, CFRangeMake(0, 12), kCTForegroundColorAttributeName, red);
+    CTFramesetterRef framesetter = CTFramesetterCreateWithAttributedString(attrString);
+    CFRelease(attrString);
+    // Create a frame.
+    CTFrameRef frame = CTFramesetterCreateFrame(framesetter, CFRangeMake(0, 0), path, NULL);
+    
+    // Draw the specified frame in the given context.
+    CTFrameDraw(frame, context);
+    
+    // Release the objects we used.
+    /*CFRelease(frame);
+    CFRelease(path);
+    CFRelease(framesetter);*/
+    
+    
     
     CGContextScaleCTM(context,1,-1); //переворачиваю ось игрек что бы текст выводился нормально
     
