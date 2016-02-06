@@ -62,26 +62,29 @@
         self.X2.text = [NSString stringWithFormat:@"%f",abc];
         
     }
-    //Вычисляем вершину параболы
+    //Count top of graph
     double x0 = 0, y0 = 0;
     x0 = -([self.bx.text doubleValue]/(2*[self.ax.text doubleValue]));
     y0 = -([self.D.text doubleValue]/(4*[self.ax.text doubleValue]));
     self.graphicView.x0 = x0;
     self.graphicView.y0 = y0;
+    self.x0Label.text = [NSString stringWithFormat:@"%f", x0]; //Convertation double to NSString
+    self.y0Label.text = [NSString stringWithFormat:@"%f", y0];
     self.graphicView.a = [self.ax.text doubleValue];
     self.graphicView.b = [self.bx.text doubleValue];
     self.graphicView.c = [self.c.text doubleValue];
     self.graphicView.x1 = [self.X1.text doubleValue];
     self.graphicView.x2 = [self.X2.text doubleValue];
+    //Refresh graph
     [self.graphicView setNeedsDisplay];
     
     
 }
 - (IBAction)clearButton:(id)sender {
     //Clean input form
-    [self.ax setText:@"1"];
-    [self.bx setText:@"1"];
-    [self.c setText:@"1"];
+    [self.ax setText:@"0"];
+    [self.bx setText:@"0"];
+    [self.c setText:@"0"];
     [self.D setText:@"D"];
     [self.X1 setText:@"X1"];
     [self.X2 setText:@"X2"];

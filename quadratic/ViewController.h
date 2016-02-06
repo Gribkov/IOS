@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *X2;
 - (IBAction)clearButton:(id)sender;
 @property (weak, nonatomic) IBOutlet GraphView *graphicView;
+@property (weak, nonatomic) IBOutlet UILabel *x0Label;
+@property (weak, nonatomic) IBOutlet UILabel *y0Label;
 
 @end
 
