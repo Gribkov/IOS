@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B60CE1C21BD41EA20021AD0A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = B60CE1C11BD41EA20021AD0A /* GraphView.m */; settings = {ASSET_TAGS = (); }; };
+		B60CE1C21BD41EA20021AD0A /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = B60CE1C11BD41EA20021AD0A /* GraphView.m */; };
 		B641D2D81BB3254000A1B8B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B641D2D71BB3254000A1B8B6 /* main.m */; };
 		B641D2DB1BB3254000A1B8B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B641D2DA1BB3254000A1B8B6 /* AppDelegate.m */; };
 		B641D2DE1BB3254000A1B8B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B641D2DD1BB3254000A1B8B6 /* ViewController.m */; };
@@ -420,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quadratic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gibkov.Roman.V.quadratic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -431,10 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = quadratic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Gibkov.Roman.V.quadratic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
