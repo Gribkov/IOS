@@ -22,7 +22,7 @@
         CGPointMake(230, 120), CGPointMake(225, 122),
         CGPointMake(120, 10), CGPointMake(118, 15),
         CGPointMake(120, 10), CGPointMake(122, 15)};
-    CGContextSetLineWidth(context, 1.5);
+    CGContextSetLineWidth(context, 2);
     CGContextStrokeLineSegments(context, osiPoints, 12);
     
     // Count scale
